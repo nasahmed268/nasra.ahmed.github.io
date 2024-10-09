@@ -1,0 +1,81 @@
+﻿body {
+    background-color: #f0f0f5; /* Light grey background for a clean look */
+}
+
+.dropbtn {
+    font-size: 20px;
+    background-color: #6A5ACD; /* Soft purple-blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #98FB98; /* Light pastel green */
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #00008B; /* Dark blue */
+}
+
+.dropdown-content a:hover {
+    background-color: #ADD8E6; /* Light blue hover effect */
+}
+
+.show {
+    display: block;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #6A5ACD;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #98FB98; /* Button hover effect */
+}
+
+img {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+div {
+    background-color: #ADD8E6; /* Light blue */
+    color: #FF8C00; /* Orange */
+    border: 2px solid #98FB98;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+div:hover {
+    background-color: #6A5ACD; /* Purple-blue hover */
+    color: white;
+}
