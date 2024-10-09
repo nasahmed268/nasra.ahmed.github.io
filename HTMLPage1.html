@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Buttons & Menus</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <div id="nameDisplay"></div>
+
+    <img id="myImage" src="https://via.placeholder.com/200" alt="Profile Image" onclick="enlargeImage()" width="200px">
+
+    <nav>
+        <a href="https://www.torontomu.ca">Home</a>
+        <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">More</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="https://github.com/nasahmed268/nasra.ahmed.github.io">GitHub</a>
+                <a href="https://www.behance.net">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="width:200px;height:100px;padding:30px;">
+        Mouse Over Me
+    </div>
+
+    <script src="Script1.js"></script>
+</body>
+</html>
