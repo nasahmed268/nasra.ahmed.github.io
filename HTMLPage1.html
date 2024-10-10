@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITM 780 Lab 5</title>
+   
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+  
+    <nav>
+        <a href="https://www.linkedin.com/in/nasra-ahmed-898a61247/" target="_blank" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)">LinkedIn</a>
+        <a href="https://github.com/nasahmed268/nasra.ahmed.github.io" target="_blank" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)">GitHub</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="https://www.linkedin.com/in/nasra-ahmed-898a61247/">LinkedIn</a>
+            <a href="https://github.com/nasahmed268/nasra.ahmed.github.io">GitHub</a>
+        </div>
+    </div>
+
+    <div>
+        <button type="button" id="myButton" onclick="askName()">Enter Your Name</button>
+        <p id="nameDisplay"></p>
+    </div>
+
+    
+    <div>
+        <img src="images/yourimage.jpg" alt="Your Image" id="profileImage" onclick="enlargeImage()">
+    </div>
+
+    
+    <script src="Script1.js"></script>
+</body>
+</html>
