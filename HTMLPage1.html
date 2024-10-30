@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITM 780 Lab 6</title>
+    <!-- Link to CSS for styling the webpage -->
+    <link rel="stylesheet" href="StyleSheet1.css"> 
+</head>
+<body>
+    <!-- navigation bar with links to social media and contact section -->
+    <nav>
+        <!-- LinkedIn profile link -->
+        <a href="https://www.linkedin.com/in/nasra-ahmed-898a61247/" target="_blank" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)">LinkedIn</a>
+        <!-- GitHub profile link -->
+        <a href="https://github.com/nasahmed268/nasra.ahmed.github.io" target="_blank" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)">GitHub</a>
+        <!-- Contact link (placeholder link) -->
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main content section containing the form for user input -->
+    <main>
+        <!-- User input form, allowing data collection and local storage -->
+        <form id="myform">
+            <!-- Username field for collecting user's username -->
+            <p>
+                <label for="username">Username:</label>
+                <input id="username" type="text" placeholder="Enter your username">
+            </p>
+            <!-- Password field for collecting user's password -->
+            <p>
+                <label for="password">Password:</label>
+                <input id="password" type="password" placeholder="Enter your password">
+            </p>
+            <!-- Favorite Color field for selecting user's favorite color -->
+            <p>
+                <label for="favcolor">Favorite Color:</label>
+                <input id="favcolor" type="color">
+            </p>
+            <!-- Radio buttons for choosing between Option A and Option B -->
+            <p>
+                <input type="radio" id="optionA" name="choice" value="A">
+                <label for="optionA">Option A</label>
+                <input type="radio" id="optionB" name="choice" value="B">
+                <label for="optionB">Option B</label>
+            </p>
+            <!-- Checkbox for subscribing to the newsletter -->
+            <p>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Subscribe to newsletter</label>
+            </p>
+            <!-- Textarea for user comments -->
+            <p>
+                <label for="comments">Comments:</label><br>
+                <textarea id="comments" rows="4" cols="50" placeholder="Enter your comments"></textarea>
+            </p>
+            <!-- Submit button to store data in local storage and Clear button to reset form -->
+            <p>
+                <input type="button" onclick="storeFormData()" value="Submit">
+                <input type="button" onclick="clearForm()" value="Clear">
+            </p>
+        </form>
+    </main>
+
+    <!-- Footer section with copyright notice -->
+    <footer>
+        <p>&copy; 2024 Nasra's Website</p>
+    </footer>
+
+    <!-- JavaScript file for form functions -->
+    <script src="Script1.js"></script> 
+    <!-- GitHub Link for direct access to the webpage -->
+    <!-- GitHub Link: https://nasahmed268.github.io/nasra.ahmed.github.io/ -->
+</body>
+</html>
+
