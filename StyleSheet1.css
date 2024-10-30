@@ -1,115 +1,91 @@
-﻿
-/* Basic styling */ 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #faf3e0; /* Light cream background */
-    color: #333;
-    margin: 20px;
-    padding: 0;
+﻿/* Styling for the form */
+form {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation menu styling */
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Styling for input fields, text areas */
+input[type="text"],
+input[type="password"],
+input[type="color"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    border: 2px solid #6200ea;
+    outline: none;
+}
+
+/* styling for the buttons */
+input[type="button"] {
+    background: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-right: 10px; /* Make sures the buttons are spaced apart */
+}
+
+input[type="button"]:hover {
+    background: #5a48c9;
+    transform: scale(1.05);
+}
+
+/* Navigation  */
 nav {
+    text-align: center;
     margin-bottom: 30px;
-    padding: 15px;
-    background-color: #3d5a80; /* Dark blue background */
-    border-radius: 8px;
-    display: inline-block;
 }
 
 nav a {
-    margin-right: 20px;
-    font-size: 18px;
-    color: white;
     text-decoration: none;
-    padding: 10px;
+    color: #6200ea;
+    margin-right: 10px;
 }
 
 nav a:hover {
-    background-color: #98c1d9; /* Light blue hover */
-    color: #ffffff;
-    border-radius: 4px;
+    text-decoration: underline;
+    color: #3700b3;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #ee6c4d; /* Coral background */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 20px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-.dropbtn:hover {
-    background-color: #f4a261; /* Lighter coral hover */
+/* Custom font */
+label {
+    font-weight: 600; /* Bold font for labels */
 }
 
-/* Dropdown container */
-.dropdown {
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #98c1d9; /* Light blue background */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-.dropdown-content a {
-    color: #293241; /* Dark navy text */
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #e0fbfc; /* Light cyan hover */
-    border-radius: 4px;
-}
-
-/* Show the dropdown menu */
-.show {
-    display: block;
-}
-
-/* Button styling */
-button {
-    font-size: 18px;
-    padding: 12px 20px;
-    margin: 20px 0;
-    background-color: #ee6c4d; /* Coral button */
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #f4a261; /* Lighter coral hover */
-}
-
-/* Image styling */
-#profileImage {
-    width: 150px;
-    transition: transform 0.3s;
-    border: 3px solid #3d5a80; /* Dark blue border */
-    border-radius: 10px;
-}
-
-#profileImage.enlarged {
-    transform: scale(2);
-    border: 3px solid #ee6c4d; /* Coral border when enlarged */
-}
-
-/* Paragraph styling */
-p {
-    font-size: 18px;
-    color: #3d5a80; /* Dark blue text */
+nav a {
+    font-weight: 400; /* Regular font for links */
 }
