@@ -5,69 +5,112 @@ function storeFormData() {
         return; // If validation fails, stop form submission
     }
 
-    // collecting the form data into an object
-    let formData = {
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
-        favcolor: document.getElementById("favcolor").value,
-        // get the value of the selected radio button, if any
-        choice: document.querySelector('input[name="choice"]:checked') ? document.querySelector('input[name="choice"]:checked').value : '',
-        subscribe: document.getElementById("subscribe").checked,
-        comments: document.getElementById("comments").value,
-    };
+    if (confirm("Are you sure you want to submit the form?")) {
+        // Collecting the form data into an object
+        let choiceElement = document.querySelector('input[name="choice"]:checked');
+        let choiceValue = choiceElement ? choiceElement.value : '';
 
-    // Store form data as a JSON string
-    localStorage.setItem("formData", JSON.stringify(formData));
-    alert("Form data has been saved!");
+        let formData = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+            favcolor: document.getElementById("favcolor").value,
+            choice: choiceValue,
+            subscribe: document.getElementById("subscribe").checked,
+            comments: document.getElementById("comments").value,
+        };
+
+        // Store form data as a JSON string
+        localStorage.setItem("formData", JSON.stringify(formData));
+        alert("Form data has been saved!");
+    }
 }
 
-// functions to clear form and remove data from the storage
+// Function to clear form and remove data from storage
 function clearForm() {
-    document.getElementById("myform").reset(); // Reset form fields to their orginal values
-    localStorage.removeItem("formData"); // Remove form data from local storage
-    alert("Form cleared!"); // Alert user that the form has been cleared
+    if (confirm("Are you sure you want to clear the form? This action cannot be undone.")) {
+        document.getElementById("myform").reset(); // Reset form fields to their original values
+        localStorage.removeItem("formData"); // Remove form data from local storage
+        alert("Form cleared!"); // Alert user that the form has been cleared
+    }
 }
 
 // Function to validate form data
 function validateForm() {
+    let errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = ""; // Clear any existing messages
+
     let username = document.getElementById("username").value;  // Get the username
     let password = document.getElementById("password").value; // Get the password
     let choice = document.querySelector('input[name="choice"]:checked'); 
     let comments = document.getElementById("comments").value; // Get the comments
-    
+
     // Validate username
     if (username === "") {
-        alert("Username is required.");
+        errorMessage.textContent = "Username is required.";
         return false;
     }
     if (username.length < 3) {
-        alert("Username must be at least 3 characters long.");
+        errorMessage.textContent = "Username must be at least 3 characters long.";
         return false;
     }
 
-    // validate password
+    // Validate password
     if (password === "") {
-        alert("Password is required.");
+        errorMessage.textContent = "Password is required.";
         return false;
     }
     if (password.length < 6) {
-        alert("Password must be at least 6 characters long.");
+        errorMessage.textContent = "Password must be at least 6 characters long.";
         return false;
     }
 
-    // Validate button choice 
+    // Validate radio button choice
     if (!choice) {
-        alert("Please select an option (Option A or Option B).");
+        errorMessage.textContent = "Please select an option (Option A or Option B).";
         return false;
     }
 
-    // validate comments field 
+    // Validate comments field 
     if (comments === "") {
-        alert("Please enter your comments.");
+        errorMessage.textContent = "Please enter your comments.";
         return false;
     }
 
     // If all validations pass, return true
-    return true;
+    return true; 
 }
 
+// Function to load form data from local storage
+function loadFormData() {
+    let storedData = localStorage.getItem("formData");
+    if (storedData) {
+        let formData = JSON.parse(storedData);
+        document.getElementById("username").value = formData.username;
+        document.getElementById("password").value = formData.password;
+        document.getElementById("favcolor").value = formData.favcolor;
+        if (formData.choice) {
+            document.querySelector(`input[name="choice"][value="${formData.choice}"]`).checked = true;
+        }
+        document.getElementById("subscribe").checked = formData.subscribe;
+        document.getElementById("comments").value = formData.comments;
+    }
+}
+
+// Add event listeners on DOM content loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Load stored form data when the page loads
+    loadFormData();
+
+    // Attach click event listeners for form buttons
+    document.getElementById("storeFormDataBtn").addEventListener("click", storeFormData);
+    document.getElementById("clearFormBtn").addEventListener("click", clearForm);
+});
+
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
+});

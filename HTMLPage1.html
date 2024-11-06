@@ -1,76 +1,201 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITM 780 Lab 6</title>
-    <!-- Link to CSS for styling the webpage -->
-    <link rel="stylesheet" href="StyleSheet1.css"> 
+    <title>Nasra's Portfolio</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Dropdown Button Styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 15px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: #f2e6ff;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #7a3da8;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d9b3ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-btn {
+            background-color: #7a3da8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #6a1b9a;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- navigation bar with links to social media and contact section -->
-    <nav>
-        <!-- LinkedIn profile link -->
-        <a href="https://www.linkedin.com/in/nasra-ahmed-898a61247/" target="_blank" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)">LinkedIn</a>
-        <!-- GitHub profile link -->
-        <a href="https://github.com/nasahmed268/nasra.ahmed.github.io" target="_blank" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)">GitHub</a>
-        <!-- Contact link (placeholder link) -->
-        <a href="#">Contact</a>
-    </nav>
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <button class="dropdown-btn">Menu</button>
+        <div class="dropdown-content">
+            <a href="https://www.linkedin.com/in/nasra-ahmed-898a61247/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/nasahmed268/nasra.ahmed.github.io" target="_blank">GitHub</a>
+            <a href="mailto:n13ahmed@torontomu.ca" target="_blank">Email</a>
+        </div>
+    </div>
 
-    <!-- Main content section containing the form for user input -->
-    <main>
-        <!-- User input form, allowing data collection and local storage -->
+    <!-- Hero Section with Navigation -->
+    <header>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/nasra-ahmed-898a61247/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/nasahmed268/nasra.ahmed.github.io" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:n13ahmed@torontomu.ca" target="_blank" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <h1><span class="highlight">N</span>asra <span class="highlight">A</span>hmed</h1>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#interests">Interests</a>
+            <a href="#contact-form">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-content">
+            <img src="IMG_4362.jpg" alt="Nasra Ahmed" class="profile-photo">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hello! I'm Nasra, a 4th year Business Technology Management student at Toronto Metropolitan University. I am passionate about Data Management, Cybersecurity, and Digital tools to solve real-world problems. Welcome to my portfolio website!</p>
+                <a href="NasraAhmeddResume.pdf" class="resume-link" target="_blank">Resume</a>
+
+                <!-- Skill Tags -->
+                <div class="skills">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Data Analysis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Education Section -->
+<section id="education" class="card">
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <p>I graduated from JARVIS Collegiate Institute with honors, achieving the status of Ontario Scholar.</p>
+    <ul class="education-list">
+        <li><strong>High School:</strong> JARVIS Collegiate Institute</li>
+        <li><strong>University:</strong> Toronto Metropolitan University, Business Technology Management (2021 - Present)</li>
+        <li><strong>Relevant Course:</strong> ITM500 - Data and Information Management (Most useful due to SQL and data management concepts)</li>
+        <li><strong>Extra-Curricular:</strong> TMU Global Justice and Change</li>
+    </ul>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="card">
+    <h2><i class="fas fa-briefcase"></i> Experience</h2>
+    <div class="experience-item">
+        <h3>Ontario Government - Ministry of Health</h3>
+        <p><strong>Role:</strong> Product Management Intern</p>
+        <p><strong>Duration:</strong> May 2023 - August 2024</p>
+        <ul class="experience-list">
+            <li>Enhanced data processing efficiency using SQL, Python, and Power BI.</li>
+            <li>Developed user-centric digital tools.</li>
+            <li>Implemented data management protocols for sensitive information.</li>
+        </ul>
+    </div>
+</section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <h2>Interests</h2>
+        <p>In my free time, I love <span class="highlight">going to the gym</span>
+            <i class="fas fa-dumbbell"></i>, <span class="highlight">enjoying outdoor activities</span>
+            <i class="fas fa-tree"></i>, and <span class="highlight">exploring new places</span>
+            <i class="fas fa-camera"></i>. I also enjoy planning vacations to places I have visited so far like
+            <span class="highlight">New York</span> <i class="fas fa-building"></i>,
+            <span class="highlight">London</span> <i class="fas fa-bus"></i>, and the
+            <span class="highlight">Dominican Republic</span> <i class="fas fa-umbrella-beach"></i>.
+            I am also planning to visit more places in the coming future.
+        </p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+        <h2>Contact Me</h2>
+        <p>To get started, please fill out the form below with your details and any feedback or questions you have.</p>
+        <p>I’ll get back to you within 24-48 hours to discuss how we can work together or answer your questions.</p>
         <form id="myform">
-            <!-- Username field for collecting user's username -->
             <p>
-                <label for="username">Username:</label>
-                <input id="username" type="text" placeholder="Enter your username">
+                <label for="firstName">First Name:</label>
+                <input id="firstName" type="text" placeholder="Enter your first name" required>
             </p>
-            <!-- Password field for collecting user's password -->
             <p>
-                <label for="password">Password:</label>
-                <input id="password" type="password" placeholder="Enter your password">
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" type="text" placeholder="Enter your last name" required>
             </p>
-            <!-- Favorite Color field for selecting user's favorite color -->
             <p>
-                <label for="favcolor">Favorite Color:</label>
-                <input id="favcolor" type="color">
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="Enter your email" required>
             </p>
-            <!-- Radio buttons for choosing between Option A and Option B -->
             <p>
-                <input type="radio" id="optionA" name="choice" value="A">
-                <label for="optionA">Option A</label>
-                <input type="radio" id="optionB" name="choice" value="B">
-                <label for="optionB">Option B</label>
+                <label>Preferred Method of Contact:</label><br>
+                <input type="radio" id="phone" name="contactMethod" value="Phone Number">
+                <label for="phone">Phone Number</label><br>
+                <input type="radio" id="emailContact" name="contactMethod" value="Email">
+                <label for="emailContact">Email</label>
             </p>
-            <!-- Checkbox for subscribing to the newsletter -->
             <p>
-                <input type="checkbox" id="subscribe" name="subscribe">
-                <label for="subscribe">Subscribe to newsletter</label>
+                <label for="comments">Comments or Feedback:</label><br>
+                <textarea id="comments" rows="4" cols="50" placeholder="Enter your comments or feedback"></textarea>
             </p>
-            <!-- Textarea for user comments -->
-            <p>
-                <label for="comments">Comments:</label><br>
-                <textarea id="comments" rows="4" cols="50" placeholder="Enter your comments"></textarea>
-            </p>
-            <!-- Submit button to store data in local storage and Clear button to reset form -->
-            <p>
-                <input type="button" onclick="storeFormData()" value="Submit">
-                <input type="button" onclick="clearForm()" value="Clear">
-            </p>
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Submit</button>
+                <button type="reset" class="clear-button">Clear</button>
+            </div>
         </form>
-    </main>
+        <!-- Add an area to display error messages -->
+        <p id="error-message" style="color: red;"></p>
+    </section>
 
-    <!-- Footer section with copyright notice -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Nasra's Website</p>
+        <p>&copy; Nasra Ahmed's Website</p>
     </footer>
 
-    <!-- JavaScript file for form functions -->
-    <script src="Script1.js"></script> 
-    <!-- GitHub Link for direct access to the webpage -->
-    <!-- GitHub Link: https://nasahmed268.github.io/nasra.ahmed.github.io/ -->
 </body>
-</html>
 
+</html>

@@ -1,11 +1,195 @@
-﻿/* Styling for the form */
-form {
-    background: #f5f5f5;
+﻿/* Reset some default styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import new Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+/* Body Styling */
+body {
+    font-family: 'Lora', serif; /* Changed to Lora for a more aesthetic look */
+    background-color: #f2e6ff; /* Light violet background */
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Styling */
+header {
+    background: linear-gradient(to right, #d9b3ff, #b380ff); /* Light violet gradient */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative; /* Allows positioning of the social icons within the header */
+}
+
+/* Styling for header name */
+header h1 {
+    font-size: 3em; /* Larger font size to make the name stand out */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Elegant and readable font */
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+/* Highlight initials */
+header h1 .highlight {
+    color: #7a3da8; /* Darker purple for the initials */
+}
+
+/* Style for the social icons in the header */
+.social-icons {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5em; /* Increase the icon size for better visibility */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e6e6e6; /* Change icon color on hover to a soft, lighter shade */
+}
+
+/* Styling for interests section for a more aesthetic look */
+#interests {
+    padding: 30px;
+    background: linear-gradient(to right, #fce4ec, #f3e5f5); /* Gradient for background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* A larger shadow for depth */
+}
+
+#interests h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #6A1B9A;
+    font-weight: bold;
+}
+
+#interests p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    color: #4a148c;
+    line-height: 1.8;
+}
+
+#interests span {
+    font-weight: bold;
+}
+
+#interests i {
+    transform: scale(1.1);
+    margin-left: 5px;
+}
+
+/* Navigation Styling */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(179, 128, 255, 0.95); /* Light violet shade */
+    padding: 15px 0;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif; /* Font change for links */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    margin: 40px auto;
     padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #d9b3ff; /* Light violet left border */
+    padding-left: 15px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #7a3da8; /* Darker shade of violet */
+    font-family: 'Montserrat', sans-serif; /* Font change for headings */
+}
+
+section h2:hover {
+    color: #9b59b6; /* Lighter purple for hover effect */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* About Me Section Styling */
+#about {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    justify-content: space-between;
+}
+
+#about img.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-link {
+    display: block;
+    margin: 20px 0;
+    color: #7a3da8;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Skill Tags */
+.skills {
+    margin-top: 20px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #7a3da8; /* Dark violet for skill tags */
+    color: white;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+/* Form Styling */
+form {
+    background: #f7f1ff; /* Very light violet background */
+    padding: 40px; /* Adjusted padding for better spacing */
     border-radius: 8px;
-    width: 50%;
-    margin: 20px auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 40px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: left;
 }
 
 form p {
@@ -16,76 +200,150 @@ label {
     font-weight: bold;
 }
 
-/* Styling for input fields, text areas */
 input[type="text"],
-input[type="password"],
-input[type="color"],
+input[type="email"],
 textarea {
-    width: 90%;
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #7a3da8; /* Dark violet border */
     border-radius: 4px;
+    font-family: 'Montserrat', sans-serif; /* Font change for form inputs */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="color"]:focus,
+input[type="email"]:focus,
 textarea:focus {
-    border: 2px solid #6200ea;
-    outline: none;
+    border: 2px solid #6a1b9a;
+    box-shadow: 0px 0px 10px rgba(122, 61, 168, 0.4);
+    transform: scale(1.05);
 }
 
-/* styling for the buttons */
-input[type="button"] {
-    background: #6200ea;
-    color: white;
+/* Submit and Clear Button Styles */
+.submit-button, .clear-button {
+    flex: 1;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
-    margin-right: 10px; /* Make sures the buttons are spaced apart */
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-input[type="button"]:hover {
-    background: #5a48c9;
-    transform: scale(1.05);
+.submit-button {
+    background: #7a3da8;
+    color: white;
 }
 
-/* Navigation  */
-nav {
-    text-align: center;
-    margin-bottom: 30px;
+.submit-button:hover {
+    background: #6a1b9a;
 }
 
-nav a {
-    text-decoration: none;
-    color: #6200ea;
-    margin-right: 10px;
+.clear-button {
+    background: #c5a3e2; /* Updated for consistency */
+    color: #333;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    color: #3700b3;
+.clear-button:hover {
+    background: #b380ff; /* Complementary hover color */
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     text-align: center;
     font-size: 0.9em;
-    color: #888;
-    margin-top: 20px;
-}
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Custom font */
-label {
-    font-weight: 600; /* Bold font for labels */
+    color: white;
+    margin-top: 40px;
+    background: #7a3da8; /* Dark violet */
+    padding: 20px;
 }
 
-nav a {
-    font-weight: 400; /* Regular font for links */
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+/* Card Styling */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #d9b3ff;
+    padding-left: 15px;
+}
+
+/* Education and Experience Headings */
+.card h2 {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #6A1B9A;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.card h2 i {
+    margin-right: 10px;
+}
+
+/* Education and Experience Lists */
+.education-list, .experience-list {
+    list-style-type: none;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.education-list li, .experience-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.education-list li::before, .experience-list li::before {
+    content: "\f0da"; /* Font Awesome icon for bullet points */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #6A1B9A;
+}
+
+/* Experience Item Styling */
+.experience-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: #7a3da8;
+    margin-top: 0;
+}
+
+.experience-item p {
+    font-family: 'Lora', serif;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1.1em;
 }
