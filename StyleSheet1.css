@@ -347,3 +347,69 @@ footer {
     color: #555;
     font-size: 1.1em;
 }
+
+
+/* Accessibility Feature Buttons Styling */
+.accessibility-button {
+    padding: 10px;
+    background-color: #3e8ed0; /* Blue for accessibility buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Montserrat', sans-serif; /* Matching font */
+}
+
+.accessibility-button:hover {
+    background-color: #337ab7; /* Darker blue for hover state */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Button Styles for Enlarge Text and Color Toggle Buttons */
+#text-resize button,
+#color-toggle button {
+    margin: 10px 5px;
+}
+
+/* Styling for Alt-Text Buttons */
+#images-section button {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Section Consistency for Media and Images */
+#media-section,
+#text-resize,
+#color-toggle,
+#images-section {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 1000px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #d9b3ff; /* Matching section border color */
+    padding-left: 15px;
+}
+
+/* Media Section Specific Styling */
+#media-section video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for media */
+}
+
+/* Consistent Padding and Border Radius for Images Section */
+#images-section figure {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#images-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+}

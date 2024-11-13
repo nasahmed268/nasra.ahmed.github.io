@@ -54,8 +54,24 @@
         .dropdown-btn:hover {
             background-color: #6a1b9a;
         }
+
+        /* Common styling for all buttons */
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
+<link rel="stylesheet" href="StyleSheet1.css">
 
 <body>
     <!-- Dropdown Menu -->
@@ -112,32 +128,32 @@
         </div>
     </section>
 
-   <!-- Education Section -->
-<section id="education" class="card">
-    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-    <p>I graduated from JARVIS Collegiate Institute with honors, achieving the status of Ontario Scholar.</p>
-    <ul class="education-list">
-        <li><strong>High School:</strong> JARVIS Collegiate Institute</li>
-        <li><strong>University:</strong> Toronto Metropolitan University, Business Technology Management (2021 - Present)</li>
-        <li><strong>Relevant Course:</strong> ITM500 - Data and Information Management (Most useful due to SQL and data management concepts)</li>
-        <li><strong>Extra-Curricular:</strong> TMU Global Justice and Change</li>
-    </ul>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="card">
-    <h2><i class="fas fa-briefcase"></i> Experience</h2>
-    <div class="experience-item">
-        <h3>Ontario Government - Ministry of Health</h3>
-        <p><strong>Role:</strong> Product Management Intern</p>
-        <p><strong>Duration:</strong> May 2023 - August 2024</p>
-        <ul class="experience-list">
-            <li>Enhanced data processing efficiency using SQL, Python, and Power BI.</li>
-            <li>Developed user-centric digital tools.</li>
-            <li>Implemented data management protocols for sensitive information.</li>
+    <!-- Education Section -->
+    <section id="education" class="card">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p>I graduated from JARVIS Collegiate Institute with honors, achieving the status of Ontario Scholar.</p>
+        <ul class="education-list">
+            <li><strong>High School:</strong> JARVIS Collegiate Institute</li>
+            <li><strong>University:</strong> Toronto Metropolitan University, Business Technology Management (2021 - Present)</li>
+            <li><strong>Relevant Course:</strong> ITM500 - Data and Information Management (Most useful due to SQL and data management concepts)</li>
+            <li><strong>Extra-Curricular:</strong> TMU Global Justice and Change</li>
         </ul>
-    </div>
-</section>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="card">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="experience-item">
+            <h3>Ontario Government - Ministry of Health</h3>
+            <p><strong>Role:</strong> Product Management Intern</p>
+            <p><strong>Duration:</strong> May 2023 - August 2024</p>
+            <ul class="experience-list">
+                <li>Enhanced data processing efficiency using SQL, Python, and Power BI.</li>
+                <li>Developed user-centric digital tools.</li>
+                <li>Implemented data management protocols for sensitive information.</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Interests Section -->
     <section id="interests">
@@ -191,6 +207,80 @@
         <p id="error-message" style="color: red;"></p>
     </section>
 
+    <!-- Media Section with Accessibility Features -->
+    <section id="media-section">
+        <h2>Media with Accessibility Features</h2>
+        <!-- Embedded YouTube Video -->
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/inWWhr5tnEA" 
+            title="What Is Cyber Security | How It Works?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <figcaption>Caption: What Is Cyber Security | How It Works? Retrieved from YouTube (Simply Explained, 2021).</figcaption>
+        </figure>
+    </section>
+
+    <!-- Text Resize Section -->
+    <section id="text-resize">
+        <h2>Text Size Accessibility</h2>
+        <p>This section demonstrates the ability to increase text size for better readability.</p>
+        <button onclick="enlargeText()">Enlarge Text</button>
+        <button onclick="resetText()">Reset Text Size</button>
+    </section>
+    <script>
+        function enlargeText() {
+            document.body.style.fontSize = "1.5em";
+        }
+        function resetText() {
+            document.body.style.fontSize = "1em";
+        }
+    </script>
+
+    <!-- Color Toggle Section -->
+    <section id="color-toggle">
+        <h2>Color Blind Accessibility</h2>
+        <p>This button will switch the colors to be more suitable for those with color blindness.</p>
+        <button onclick="changeColors()">Change Colors</button>
+        <button onclick="resetColors()">Reset Colors</button>
+    </section>
+    <script>
+        function changeColors() {
+            document.body.style.backgroundColor = "#1E88E5"; // Set a color-blind-friendly background
+            document.body.style.color = "#FFC107"; // Set a readable text color
+        }
+        function resetColors() {
+            document.body.style.backgroundColor = "#f0f0f0"; // Original background color
+            document.body.style.color = "#333"; // Original text color
+        }
+    </script>
+
+    <!-- Accessible Images Section -->
+    <section id="images-section">
+        <h2>Accessible Images</h2>
+
+        <!-- Leaves falling near St. Lawrence Market -->
+        <figure>
+            <img id="image1" src="IMG_3074.JPG" alt="Leaves falling near St. Lawrence Market taken on November 1st, 2024">
+            <figcaption>Date and Location: November 1st, 2024, St. Lawrence Market, Toronto, Ontario</figcaption>
+            <button class="accessibility-button" onclick="showAltText('image1')">Show Alt-Text</button>
+            <p id="altText1"></p>
+        </figure>
+
+        <!-- Inside St. Lawrence Market -->
+        <figure>
+            <img id="image2" src="IMG_0599.jpg" alt="Inside St. Lawrence Market showing fresh fruits and vegetables taken on October 31st, 2024">
+            <figcaption>Date and Location: October 31st, 2024, St. Lawrence Market, Toronto, Ontario</figcaption>
+            <button class="accessibility-button" onclick="showAltText('image2')">Show Alt-Text</button>
+            <p id="altText2"></p>
+        </figure>
+
+        <!-- Baking muffins during reading week -->
+        <figure>
+            <img id="image3" src="IMG_1980.jpg" alt="Baking muffins during reading week with a candle and decorations taken on October 15th, 2024">
+            <figcaption>Date and Location: October 15th, 2024, Reading Week, Toronto, Ontario</figcaption>
+            <button class="accessibility-button" onclick="showAltText('image3')">Show Alt-Text</button>
+            <p id="altText3"></p>
+        </figure>
+    </section>
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; Nasra Ahmed's Website</p>
@@ -199,3 +289,4 @@
 </body>
 
 </html>
+
