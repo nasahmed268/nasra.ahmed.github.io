@@ -95,6 +95,42 @@ function loadFormData() {
         document.getElementById("comments").value = formData.comments;
     }
 }
+//The right scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth', // This makes the scrolling smooth
+                block: 'start'      // Scroll to the start of the target section
+            });
+        }
+    });
+});
+
+// Current section in the navigation area
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    let currentSectionId = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSectionId = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSectionId) {
+            link.classList.add('active');
+        }
+    });
+});
+
 
 // Add event listeners on DOM content loaded
 document.addEventListener("DOMContentLoaded", function() {

@@ -10,7 +10,7 @@
 
 /* Body Styling */
 body {
-    font-family: 'Lora', serif; /* Changed to Lora for a more aesthetic look */
+    font-family: 'Lora', serif; /* changed to Lora for a more aesthetic look */
     background-color: #f2e6ff; /* Light violet background */
     color: #333;
     line-height: 1.6;
@@ -112,6 +112,18 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+/* Styling for active navigation links */
+nav a.active {
+    background-color: #6a1b9a; /* Darker shade of violet */
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #e6e6e6; /* Lighter color on hover */
 }
 
 /* Section Styling */
