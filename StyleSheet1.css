@@ -169,13 +169,23 @@ section h2:hover {
 }
 
 .resume-link {
-    display: block;
+    display: inline-block;
     margin: 20px 0;
-    color: #7a3da8;
-    text-decoration: underline;
+    color: #ffffff;
+    background-color: #7a3da8;
+    padding: 10px 20px;
+    text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
+
+.resume-link:hover {
+    background-color: #6a1b9a;
+    transform: scale(1.05);
+}
+
 
 /* Skill Tags */
 .skills {
