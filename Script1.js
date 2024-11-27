@@ -163,3 +163,36 @@ window.addEventListener('click', function(event) {
         dropdownContent.classList.remove('show');
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Load stored form data when the page loads
+    loadFormData();
+
+    // Attach click event listeners for form buttons
+    document.getElementById("storeFormDataBtn").addEventListener("click", storeFormData);
+    document.getElementById("clearFormBtn").addEventListener("click", clearForm);
+
+    // Toggle descriptions for gallery items
+    document.querySelectorAll('.toggle-description').forEach(button => {
+        button.addEventListener('click', function() {
+            const description = this.parentElement.nextElementSibling;
+            if (description.style.display === 'block') {
+                description.style.display = 'none';
+                this.textContent = 'show description';
+            } else {
+                description.style.display = 'block';
+                this.textContent = 'hide description';
+            }
+        });
+    });
+});
+
+function toggleDescription(descId) {
+    const description = document.getElementById(descId);
+    if (description.classList.contains('hidden')) {
+        description.classList.remove('hidden');
+        description.classList.add('show');
+    } else {
+        description.classList.remove('show');
+        description.classList.add('hidden');
+    }
+}
