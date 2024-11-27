@@ -150,3 +150,16 @@ document.querySelectorAll('nav a').forEach(anchor => {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+document.querySelector('.dropdown-btn').addEventListener('click', function() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.classList.toggle('show');
+});
+
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    if (!dropdown.contains(event.target)) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropdownContent.classList.remove('show');
+    }
+});
