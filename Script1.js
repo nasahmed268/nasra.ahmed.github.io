@@ -196,3 +196,4 @@ function toggleDescription(descId) {
         description.classList.add('hidden');
     }
 }
+

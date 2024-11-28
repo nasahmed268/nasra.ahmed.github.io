@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 
 <head>
     <meta charset="UTF-8">
@@ -316,43 +316,49 @@
         </section>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact-form">
-        <h2>Contact Me</h2>
-        <p>To get started, please fill out the form below with your details and any feedback or questions you have.</p>
-        <p>I’ll get back to you within 24-48 hours to discuss how we can work together or answer your questions.</p>
-        <form id="myform">
-            <p>
-                <label for="firstName">First Name:</label>
-                <input id="firstName" type="text" placeholder="Enter your first name" required>
-            </p>
-            <p>
-                <label for="lastName">Last Name:</label>
-                <input id="lastName" type="text" placeholder="Enter your last name" required>
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input id="email" type="email" placeholder="Enter your email" required>
-            </p>
-            <p>
-                <label>Preferred Method of Contact:</label><br>
-                <input type="radio" id="phone" name="contactMethod" value="Phone Number">
-                <label for="phone">Phone Number</label><br>
-                <input type="radio" id="emailContact" name="contactMethod" value="Email">
-                <label for="emailContact">Email</label>
-            </p>
-            <p>
-                <label for="comments">Comments or Feedback:</label><br>
-                <textarea id="comments" rows="4" cols="50" placeholder="Enter your comments or feedback"></textarea>
-            </p>
-            <div class="form-buttons">
-                <button type="submit" class="submit-button">Submit</button>
-                <button type="reset" class="clear-button">Clear</button>
-            </div>
-        </form>
-        <!-- Add an area to display error messages -->
-        <p id="error-message" style="color: red;"></p>
-    </section>
+   <!-- Contact Form Section -->
+<section id="contact-form">
+    <h2>Contact Me</h2>
+    <p>To get started, please fill out the form below with your details and any feedback or questions you have.</p>
+    <p>I’ll get back to you within 24-48 hours to discuss how we can work together or answer your questions.</p>
+    <form id="myform">
+        <p>
+            <label for="firstName">First Name:</label>
+            <input id="firstName" type="text" placeholder="Enter your first name" required>
+        </p>
+        <p>
+            <label for="lastName">Last Name:</label>
+            <input id="lastName" type="text" placeholder="Enter your last name" required>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+        </p>
+        <p>
+            <label for="phone">Phone Number:</label>
+            <input id="phone" type="tel" placeholder="Enter your phone number">
+        </p>
+        <p>
+            <label>Preferred Method of Contact:</label><br>
+            <input type="radio" id="phoneContact" name="contactMethod" value="Phone Number">
+            <label for="phoneContact">Phone Number</label><br>
+            <input type="radio" id="emailContact" name="contactMethod" value="Email" checked>
+            <label for="emailContact">Email</label>
+        </p>
+        <p>
+            <label for="comments">Comments or Feedback:</label><br>
+            <textarea id="comments" rows="4" cols="50" placeholder="Enter your comments or feedback"></textarea>
+        </p>
+        <div class="form-buttons">
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="reset" class="clear-button">Clear</button>
+        </div>
+    </form>
+    <!-- Add an area to display error messages -->
+    <p id="error-message" style="color: red;"></p>
+</section>
+
+
 
     <!-- JavaScript to Toggle Descriptions -->
     <script>
